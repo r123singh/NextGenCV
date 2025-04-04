@@ -4,10 +4,11 @@ enableXsrfProtection = true
 maxUploadSize = 200
 
 [theme]
+base = "dark"
 primaryColor = "#F63366"
-backgroundColor = "#FFFFFF"
-secondaryBackgroundColor = "#F0F2F6"
-textColor = "#262730"
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#262730"
+textColor = "#FAFAFA"
 font = "sans serif"
 
 [browser]
@@ -18,4 +19,4 @@ fastReruns = true
 
 [client]
 toolbarMode = "minimal"
-showErrorDetails = false 
+showErrorDetails = false
