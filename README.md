@@ -106,6 +106,141 @@ nextgenresume/
 - User data management
 - Temporary resume storage
 
+## Application Monitoring 📊
+
+### 1. Streamlit Cloud Monitoring 🔍
+- Access Streamlit Cloud Dashboard
+  ```bash
+  # Visit your app's dashboard
+  https://share.streamlit.io/
+  ```
+- Monitor:
+  * Application status and uptime
+  * Resource usage (CPU, Memory)
+  * Number of active users
+  * Error logs and exceptions
+
+### 2. Flask Server Monitoring (Render) 🖥️
+- Access Render Dashboard
+  ```bash
+  # Visit your service dashboard
+  https://dashboard.render.com/
+  ```
+- Monitor:
+  * Server health metrics
+  * Request/Response times
+  * Error rates
+  * Resource utilization
+
+### 3. Supabase Monitoring 💾
+- Access Supabase Dashboard
+  ```bash
+  # Visit your project dashboard
+  https://app.supabase.com/project/_/editor
+  ```
+- Monitor:
+  * Database connections
+  * Storage usage
+  * API requests
+  * Error logs
+  * Data transfer metrics
+
+### 4. Error Tracking 🐛
+- Check application logs:
+  ```bash
+  # Streamlit logs
+  streamlit run app_premium.py --logger.level=debug
+
+  # Flask server logs
+  python serve.py --log-level DEBUG
+  ```
+- Common issues to monitor:
+  * Failed API calls
+  * Storage errors
+  * Authentication issues
+  * Performance bottlenecks
+
+### 5. Performance Monitoring ⚡
+- Key Metrics:
+  * Page load time
+  * API response time
+  * Resume processing time
+  * File upload/download speed
+
+### 6. User Analytics 👥
+- Track using Streamlit Analytics:
+  * User sessions
+  * Feature usage
+  * Conversion rates
+  * Error encounters
+
+### 7. Health Checks 🏥
+- Automated health endpoints:
+  ```python
+  # Example health check endpoints
+  @app.route('/health')
+  def health_check():
+      return {
+          'status': 'healthy',
+          'timestamp': datetime.now().isoformat(),
+          'services': {
+              'openai': check_openai_status(),
+              'supabase': check_supabase_status(),
+              'storage': check_storage_status()
+          }
+      }
+  ```
+
+### 8. Alerting System ⚠️
+- Set up alerts for:
+  * Application downtime
+  * High error rates
+  * Resource exhaustion
+  * API quota limits
+  * Storage capacity issues
+
+### 9. Regular Maintenance Tasks 🔧
+- Daily:
+  * Check error logs
+  * Monitor resource usage
+  * Verify backup status
+
+- Weekly:
+  * Review performance metrics
+  * Clean up temporary files
+  * Update documentation
+
+- Monthly:
+  * Security audit
+  * Dependency updates
+  * Performance optimization
+
+### 10. Monitoring Tools Integration 🛠️
+- Recommended tools:
+  * Sentry - Error tracking
+  * Grafana - Metrics visualization
+  * Prometheus - Metrics collection
+  * Uptime Robot - Availability monitoring
+
+### Quick Commands Reference 📝
+
+```bash
+# View Streamlit logs
+streamlit run app_premium.py --logger.level=debug
+
+# Monitor Flask server
+python serve.py --log-level DEBUG
+
+# Check storage status
+python utils/storage_check.py
+
+# Run health checks
+curl http://your-app-url/health
+
+# View recent errors
+tail -f logs/error.log
+```
+
 ## Contributing 🤝
 
 1. Fork the repository
@@ -150,3 +285,138 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Made with ❤️ by the NextGenResume Team
 
 [Website](https://nextgencv-builder.streamlit.app/) | [Documentation](https://docs.nextgenresume.com) | [Blog](https://blog.nextgenresume.com)
+
+## Premium Package Contents 💎
+
+### Quick Overview of Included Items ⚡
+1. 🔗 **Instant Start Guide**
+   - Direct deployment link
+   - Quick setup instructions
+   - Immediate access to all resources
+
+2. 📱 **Design Resources**
+   - Complete screen designs
+   - UI/UX wireframes
+   - Responsive layouts
+
+3. 🤖 **AI Resources**
+   - 50+ optimized AI prompts
+   - Prompt engineering guide
+   - Best practices documentation
+
+4. 📄 **Resume Resources**
+   - Professional sample resumes
+   - Enhanced templates
+   - ATS-optimized formats
+
+5. 💻 **Complete Source Code**
+   - Chat implementation
+   - Authentication system
+   - Resume viewer
+   - Download functionality
+   - API integrations
+
+6. 📚 **Documentation**
+   - PRD (Product Requirements Document)
+   - Setup and deployment guides
+   - API documentation
+   - Architecture diagrams
+
+7. 💰 **One-Time Payment**
+   - Lifetime access
+   - All future updates
+   - No recurring fees
+
+### What You'll Get:
+
+#### 1. Complete Source Code & Documentation 📦
+- Full application source code
+  * Chat interface implementation
+  * Authentication system
+  * Resume viewer component
+  * Download functionality
+  * All API integrations
+- Detailed documentation
+- Setup guides
+- Code comments and explanations
+
+#### 2. Enhanced Features 🚀
+- Professional resume templates
+- Advanced AI prompts library (50+ prompts)
+- Improved resume parsing
+- Enhanced export options
+- Premium UI components
+
+#### 3. Development Resources 🛠️
+- Screen designs and wireframes
+- Database schema
+- API documentation
+- Architecture diagrams
+- Performance optimization tips
+
+#### 4. Deployment Guides 🌐
+- Step-by-step deployment instructions
+- Cloud hosting setup (Streamlit, Render)
+- Environment configuration
+- Security best practices
+- Scaling guidelines
+
+#### 5. Premium Assets 🎨
+- Sample resumes
+- Enhanced resume templates
+- UI/UX design files
+- Brand assets
+- Custom icons and graphics
+
+#### 6. Bonus Materials 🎁
+- PRD (Product Requirements Document)
+- Technical documentation
+- Best practices guide
+- SEO optimization tips
+- Marketing materials
+
+#### 7. Direct Support 💬
+- Priority email support
+- Bug fixes assistance
+- Implementation guidance
+- Code review help
+- Deployment support
+
+### Premium Features Highlight ⭐
+
+1. **Advanced Resume Processing**
+   - Enhanced parsing accuracy
+   - Multiple template support
+   - Custom formatting options
+
+2. **Extended API Integration**
+   - Complete OpenAI integration
+   - Supabase setup
+   - Storage optimization
+
+3. **Security Features**
+   - Authentication implementation
+   - Data encryption
+   - Privacy controls
+
+4. **Performance Optimizations**
+   - Caching strategies
+   - Load balancing setup
+   - Resource optimization
+
+### One-Time Payment Benefits 💰
+
+- ✅ Lifetime access to source code
+- ✅ Free updates
+- ✅ Premium support
+- ✅ All future enhancements
+- ✅ No recurring fees
+- ✅ No hidden costs
+
+### Perfect For 🎯
+
+- 👨‍💻 Developers building resume tools
+- 🏢 Companies needing resume processing
+- 🚀 Startups in HR tech
+- 💼 Career coaching platforms
+- 🎓 Educational institutions
