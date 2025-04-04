@@ -138,17 +138,21 @@
 
         // Get the URL parameter
         const urlParams = new URLSearchParams(window.location.search);
-        const directUrl = urlParams.get('url');
+        const fileUrl = urlParams.get('url');
         
         async function fetchResumeContent() {
             try {
-                if (!directUrl) {
+                if (!fileUrl) {
                     console.error('No URL provided');
                     alert('No resume URL provided');
                     return;
                 }
 
-                const response = await fetch(directUrl);
+                // Use the direct Supabase URL
+                const response = await fetch(fileUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 const content = await response.text();
                 
                 if (content) {
@@ -159,7 +163,7 @@
                 }
             } catch (err) {
                 console.error('Error fetching resume:', err);
-                alert('Error fetching resume');
+                alert('Error fetching resume: ' + err.message);
             }
         }
 

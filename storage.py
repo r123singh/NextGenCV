@@ -1,6 +1,6 @@
 import os
 from supabase import create_client
-from config import IS_PRODUCTION, UPLOAD_FOLDER
+from config import IS_PRODUCTION, UPLOAD_FOLDER, RESUME_VIEWER_URL
 from supabase_config import SUPABASE_URL, SUPABASE_KEY, SUPABASE_BUCKET
 
 class StorageHandler:

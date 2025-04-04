@@ -23,6 +23,8 @@ if not os.path.exists(UPLOAD_FOLDER):
 
 # URLs configuration
 if IS_PRODUCTION:
-    RESUME_VIEWER_URL = os.getenv('RESUME_VIEWER_URL', 'https://your-firebase-app.web.app/resume-viewer.html')
+    RESUME_VIEWER_URL = os.getenv('RESUME_VIEWER_URL')
+    if not RESUME_VIEWER_URL:
+        raise ValueError("RESUME_VIEWER_URL environment variable is required in production")
 else:
     RESUME_VIEWER_URL = 'http://127.0.0.1:5500/resume-viewer.html' 
